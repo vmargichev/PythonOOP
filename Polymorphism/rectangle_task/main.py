@@ -28,3 +28,20 @@ class Rectangle:
             return self.y2
         else:
             return self.y1
+        
+    def overlaps(self, rect):
+        if self.get_left_x() == rect.get_right_x() or self.get_left_x() < rect.get_right_x():
+            if self.get_right_x() == rect.get_left_x() or self.get_right_x() > rect.get_left_x():
+                if self.get_top_y() == rect.get_bottom_y() or self.get_top_y() > rect.get_bottom_y():
+                    if self.get_bottom_y() == rect.get_top_y() or self.get_bottom_y() < rect.get_top_y():
+                        return True
+                    else:
+                        return False
+                else:
+                    return False
+            else:
+                return False
+        else:
+            return False
+        
+
