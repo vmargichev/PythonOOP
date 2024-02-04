@@ -27,3 +27,4 @@ class Wizard:
 
     def drink_mana_potion(self):
         self.__mana += 40
+
